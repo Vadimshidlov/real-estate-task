@@ -42,6 +42,7 @@ body {
   color: #333333;
 }
 
+/* ================================================= */
 .wrapper {
   min-height: 100%;
   overflow: hidden;
@@ -49,9 +50,23 @@ body {
   flex-direction: column;
 }
 
+/* ================================================= */
+.title {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 55px;
+}
+
+.title_center {
+  text-align: center;
+}
+
+/* ================================================= */
+
 .page {
   flex: 1 1 auto;
 }
+/* ================================================= */
 
 [class*='__container'] {
   max-width: 1170px;
@@ -382,8 +397,42 @@ body {
 }
 
 /* ================================================= */
-
+.page_how {
+}
+.how {
+  padding-top: 100px;
+  padding-bottom: 110px;
+}
+.how__container {
+}
+.how__title {
+  margin-bottom: 70px;
+}
+.how__items {
+  display: grid;
+  padding: 0px 35px;
+  grid-template-columns: repeat(3, minmax(auto, 260px));
+  gap: 30px;
+  justify-content: space-between;
+}
+.how__item {
+  /* min-width: 260px; */
+}
+.item-how {
+}
+.item-how__icon {
+}
+.item-how__icon_1 {
+}
+.item-how__title {
+}
+.item-how__text {
+}
+.item-how__icon_2 {
+}
+.item-how__icon_3 {
+}
 /* ================================================= */
 
 /* ================================================= */
-/* 1_27_27 */
+/* 15_43 */
