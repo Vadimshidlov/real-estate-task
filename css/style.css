@@ -564,7 +564,24 @@ body {
   padding-top: 110px;
 }
 .deals {
+  padding-top: 110px;
+  padding-bottom: 110px;
 }
+
+@media (max-width: 990.98px) {
+  .deals {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .deals {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
 .deals__container {
 }
 .deals__header {
@@ -576,7 +593,7 @@ body {
 .header-deals {
   display: flex;
   gap: 20px;
-
+  flex-wrap: wrap;
   align-items: center;
 }
 .header-deals__content {
@@ -607,6 +624,12 @@ body {
   border-radius: 5px;
 }
 
+@media (max-width: 767.98px) {
+  .header-deals__link {
+    width: 100%;
+  }
+}
+
 .header-deals__link:hover {
   background-color: #b32516;
 }
@@ -614,26 +637,177 @@ body {
 .tabs-deals {
 }
 .tabs-deals__nav {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 50px;
+  row-gap: 10px;
+  margin-bottom: 50px;
 }
 .tabs-deals__button {
+  background-color: transparent;
+  font-size: 19px;
+  line-height: 29px;
+  cursor: pointer;
+  position: relative;
 }
+
+.tabs-deals__button:hover {
+  color: #f85a47;
+}
+
+.tabs-deals__button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  transition: all 0.3s ease 0s;
+  background-color: #f85a47;
+}
+
+.tabs-deals__button:hover::after {
+  width: 100%;
+}
+
+.tabs-deals__button.active::after {
+  width: 100%;
+}
+
+.tabs-deals__button.active {
+  color: #f85a47;
+}
+
 .tabs-deals__body {
 }
 .tabs-deals__item {
+  display: none;
+}
+
+.tabs-deals__item.active {
+  display: block;
 }
 
 .item-tabs {
 }
 .item-tabs__items {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 }
 .item-tabs__item {
+  position: relative;
 }
 .item_tabs__options {
+  display: flex;
+  gap: 6px;
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
 }
 .item-tabs__option {
+  font-size: 12px;
+  color: #ffffff;
+  padding: 6px 12px;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s ease 0s;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
 }
+
+.item-tabs__option:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
 .item-tabs__image {
+  position: relative;
+  display: block;
+  padding-bottom: 81%;
+  border-radius: 5px;
+  overflow: hidden;
 }
+.item-tabs__image:hover img {
+  transform: scale(1.2);
+}
+
+.item-tabs__image img {
+  transition: all 0.3s ease 0s;
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+/* ================================================= */
+
+.page__featured {
+}
+.featured {
+}
+.featured__container {
+}
+.featured__title {
+  margin-bottom: 95px;
+}
+.title {
+}
+.title_center {
+}
+.featured__body {
+  background: #f1ffff;
+  padding: 40px;
+  display: grid;
+  gap: 77px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.featured__images {
+}
+.images-featured {
+  display: grid;
+  justify-items: center;
+}
+.images-featured__item {
+}
+
+.images-featured__item img {
+  max-width: 100%;
+}
+
+.images-featured__item_mini {
+  transform: translate(0, -40%);
+  filter: drop-shadow(0px 163px 80px rgba(0, 0, 0, 0.04)) drop-shadow(0px 105.648px 46.8519px rgba(0, 0, 0, 0.0303704)) drop-shadow(0px 62.7852px 25.4815px rgba(0, 0, 0, 0.0242963)) drop-shadow(0px 32.6px 13px rgba(0, 0, 0, 0.02)) drop-shadow(0px 13.2815px 6.51852px rgba(0, 0, 0, 0.0157037))
+    drop-shadow(0px 3.01852px 3.14815px rgba(0, 0, 0, 0.00962963)) drop-shadow(48px 58px 44px rgba(0, 0, 0, 0.09));
+}
+
+.featured__content {
+}
+.content-featured {
+}
+.content-featured__title {
+}
+.content-featured__text {
+}
+.content-featured__option {
+}
+.option-content-featured {
+}
+.option-content-featured__item {
+}
+.option-content-featured__label1 {
+}
+.option-content-featured__value {
+}
+.content-featured__link {
+}
+
+/* ================================================= */
+/* ================================================= */
+/* ================================================= */
+/* ================================================= */
 
 /* ================================================= */
 /* 17_32 */
