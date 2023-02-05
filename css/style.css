@@ -54,11 +54,17 @@ body {
 .title {
   font-weight: 600;
   font-size: 40px;
-  line-height: 55px;
+  line-height: 1.375;
 }
 
 .title_center {
   text-align: center;
+}
+
+@media (max-width: 767.87px) {
+  .title {
+    font-size: 30px;
+  }
 }
 
 /* ================================================= */
@@ -368,6 +374,12 @@ body {
   }
 }
 
+@media (max-width: 990.98px) {
+  .main-block {
+    padding-bottom: 70px;
+  }
+}
+
 @media (max-width: 767.98px) {
   .partners-main-block__items {
     justify-content: center;
@@ -383,6 +395,9 @@ body {
 
   .form-main-block__button {
     width: 100%;
+  }
+  .main-block {
+    padding-bottom: 30px;
   }
 }
 
@@ -403,6 +418,21 @@ body {
   padding-top: 100px;
   padding-bottom: 110px;
 }
+
+@media (max-width: 990.98px) {
+  .how {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .how {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
 .how__container {
 }
 .how__title {
@@ -410,29 +440,119 @@ body {
 }
 .how__items {
   display: grid;
-  padding: 0px 35px;
   grid-template-columns: repeat(3, minmax(auto, 260px));
-  gap: 30px;
+  column-gap: 30px;
+  row-gap: 45px;
+
   justify-content: space-between;
 }
+
+@media (max-width: 991px) {
+  .how__items {
+    padding: 0px 35px;
+  }
+}
+
 .how__item {
   /* min-width: 260px; */
 }
 .item-how {
+  text-align: center;
+  display: grid;
+  justify-items: center;
+  position: relative;
 }
+
+.item-how:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 41px;
+  transform: translate(86.5%, 0px);
+  width: 210px;
+  height: 11px;
+  background: url(/img/main/how-it-works/brdr_1.svg) 0 0 / auto 100% no-repeat;
+}
+
+.item-how_2:not(:last-child)::after {
+  transform: translate(86.5%, 0px) rotate(-180deg);
+}
+
+.item-how_1 .item-how__icon {
+  background: #9672ff;
+  box-shadow: 0px 100px 80px rgba(150, 114, 255, 0.07), 0px 64.8148px 46.8519px rgba(150, 114, 255, 0.0531481), 0px 38.5185px 25.4815px rgba(150, 114, 255, 0.0425185), 0px 20px 13px rgba(150, 114, 255, 0.035), 0px 8.14815px 6.51852px rgba(150, 114, 255, 0.0274815),
+    0px 1.85185px 3.14815px rgba(150, 114, 255, 0.0168519);
+}
+.item-how_2 .item-how__icon {
+  background: #4ddffd;
+  box-shadow: 0px 100px 80px rgba(77, 223, 253, 0.07), 0px 64.8148px 46.8519px rgba(77, 223, 253, 0.0531481), 0px 38.5185px 25.4815px rgba(77, 223, 253, 0.0425185), 0px 20px 13px rgba(77, 223, 253, 0.035), 0px 8.14815px 6.51852px rgba(77, 223, 253, 0.0274815),
+    0px 1.85185px 3.14815px rgba(77, 223, 253, 0.0168519);
+}
+.item-how_3 .item-how__icon {
+  background: #f2b8ec;
+  box-shadow: 0px 100px 80px rgba(242, 184, 236, 0.07), 0px 64.8148px 46.8519px rgba(242, 184, 236, 0.0531481), 0px 38.5185px 25.4815px rgba(242, 184, 236, 0.0425185), 0px 20px 13px rgba(242, 184, 236, 0.035), 0px 8.14815px 6.51852px rgba(242, 184, 236, 0.0274815),
+    0px 1.85185px 3.14815px rgba(242, 184, 236, 0.0168519);
+}
+
 .item-how__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border-radius: 20px;
 }
-.item-how__icon_1 {
-}
+
 .item-how__title {
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 30px;
 }
 .item-how__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
 }
-.item-how__icon_2 {
+
+@media (max-width: 1199.98px) {
+  .item-how:not(:last-child)::after {
+    width: 170px;
+    transform: translate(69%, 0px);
+  }
+  .item-how_2:not(:last-child)::after {
+    transform: translate(69%, 0px) rotate(-180deg);
+  }
 }
-.item-how__icon_3 {
+
+@media (max-width: 990.98px) {
+  .item-how:not(:last-child)::after {
+    width: 130px;
+    transform: translate(63%, 0px);
+  }
+  .item-how_2:not(:last-child)::after {
+    transform: translate(63%, 0px) rotate(-180deg);
+  }
 }
+
+@media (max-width: 767.98px) {
+  .how__items {
+    grid-template-columns: 1fr;
+  }
+  .item-how:not(:last-child)::after {
+    display: none;
+  }
+  .item-how__icon {
+    margin-bottom: 20px;
+  }
+  .how__title {
+    margin-bottom: 30px;
+  }
+}
+
 /* ================================================= */
 
 /* ================================================= */
-/* 15_43 */
+/* 17_32 */
